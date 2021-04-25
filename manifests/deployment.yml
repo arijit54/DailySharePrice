@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "dailyshareprice-1b41"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "dailyshareprice-1b41"
+  template:
+    metadata:
+      labels:
+        app: "dailyshareprice-1b41"
+    spec:
+      containers:
+        - name: "dailyshareprice-1b41"
+          image: "dailyshareprice3.azurecr.io/dailyshareprice"
+          ports:
+          - containerPort: 80
