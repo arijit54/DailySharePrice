@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "dailyshareprice-1b41"
+    labels:
+        app: "dailyshareprice-1b41"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: dailyshareprice997b-dailyshareprice-1b41.4b506565b1674f008bb5.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "dailyshareprice-1b41"
+                servicePort: 80
