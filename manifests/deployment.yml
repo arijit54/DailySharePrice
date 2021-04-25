@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: "dailyshareprice-1b41"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: "dailyshareprice-1b41"
